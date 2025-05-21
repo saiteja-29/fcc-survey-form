@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>survey-form</title>
+    <link rel="stylesheet" href="styles.css"/>
+  </head>
+  <body>
+    <h1 id="title">freeCodeCamp Survey Form</h1>
+    <p id="description">Thank you for taking the time to help us improve the platform</p>
+    <form id="survey-form">
+      <fieldset>
+        <label id="name-label" for="name">Name <input type="text" id="name" name="name" required placeholder="Enter your name"></label>
+        <label id="email-label" for="email">Email <input type="email" id="email" name="email" required placeholder="Enter your Email"></label>
+        <label id="number-label" for="number">Age (optional) <input type="number" id="number" min="13" max="120" name="number" placeholder="Age"></label>
+
+        <label for="dropdown">Which option best describes your current role?
+          <select id="dropdown" name="dropdown" required>
+            <option value="" disabled selected hidden>select current role</option>
+            <option value="11">Student</option>
+            <option value="12">Full Time Job</option>
+            <option value="13">Full Time Learner</option>
+            <option value="14">Prefer Not To Say</option>
+            <option value="15">Other</option>
+          </select>
+        </label>
+      </fieldset>
+      <fieldset>
+        <legend>Would you recommend freeCodeCamp to a friend?</legend>
+          <label for="definitely"><input type="radio" id="definitely" name="referrer" class="inline" value="definitely" checked/>Definitely</label>
+          <label for="may-be"><input type="radio" id="may-be" name="referrer" value="may-be" class="inline"/>MayBe</label>
+          <label for="not-sure"><input type="radio" id="not-sure" name="referrer" value="not-sure" class="inline"/>Not Sure</label>
+
+        <legend for="favorite">What is your favorite feature of freeCodeCamp?
+          <select id="favorite" name="favorite" required>
+            <option value="" disabled selected hidden>Select an option</option>
+            <option value="21">Challenges</option>
+            <option value="22">Projects</option>
+            <option value="23">Community</option>
+            <option value="24">Open Source</option>
+          </select>
+        </legend>
+
+        <legend>What would you like to see improved? (Check all that apply)
+          <label for="front-end"><input type="checkbox" id="front-end" name="improvement" value="front-end" /> Front-end Projects</label>
+          <label for="back-end"><input type="checkbox" name="improvement" id="back-end" value="back-end" /> Back-end Projects</label>
+          <label for="data-visualization"><input type="checkbox" name="improvement" id="data-visualization" value="data-visualization"/> Data Visualization</label>
+          <label for="challenges"><input type="checkbox" name="improvement" id="challenges" value="challenges" /> Challenges</label>
+          <label for="open-source"><input type="checkbox" name="improvement"id="open-source" value="open-source"/> Open Source Community</label>
+          <label for="gitter-help"><input type="checkbox" name="improvement"id="gitter-help" value="gitter-help"/> Gitter help rooms</label>
+          <label for="videos"><input type="checkbox" name="improvement" id="videos" value="videos" /> Videos</label>
+          <label for="city-meetups"><input type="checkbox" name="improvement" id="city-meetups" value="city-meetups"/> City Meetups</label>
+          <label for="wiki"><input type="checkbox" name="improvement" id="wiki" value="wiki" /> Wiki</label>
+          <label for="forum"><input type="checkbox" name="improvement" id="forum" value="forum"/> Forum</label>
+          <label for="additional-courses"><input type="checkbox" name="improvement" id="addition-courses" value="addition-courses" /> Additional Courses</label>
+        </legend>
+      </fieldset>
+      <fieldset>
+
+        <legend for="comments">Any comments or suggestions?
+        <textarea rows="4" placeholder="Enter your comment here..." id="comments" name="comments"></textarea>
+        </legend>
+        <button type="submit" id="submit"> Submit</button>
+    </form>
+  </body>
+</html>
